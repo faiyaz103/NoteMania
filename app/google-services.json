@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "988070749921",
+    "project_id": "notemania-4a444",
+    "storage_bucket": "notemania-4a444.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988070749921:android:3dbe9e9b1b0a9eeeb939a0",
+        "android_client_info": {
+          "package_name": "com.example.notemania"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvi10AMZELXFJbXntrUjPY-kopIlnKufM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
