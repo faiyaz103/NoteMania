@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
         firebaseAuth=FirebaseAuth.getInstance();
         FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
 
-        if(firebaseUser!=null){
-            finish();
-            startActivity(new Intent(MainActivity.this,notesActivity.class));
-        }
+//        if(firebaseUser!=null){
+//            finish();
+//            startActivity(new Intent(MainActivity.this,notesActivity.class));
+//        }
         mgotosignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
     private void checkmailVerification(){
         FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
 //        assert firebaseUser != null;
-        if(firebaseUser.isEmailVerified()==true){
+        assert firebaseUser != null;
+        if(firebaseUser.isEmailVerified()){
             Toast.makeText(getApplicationContext(),"Logged In",Toast.LENGTH_SHORT).show();
             finish();
             startActivity(new Intent(MainActivity.this,notesActivity.class));
