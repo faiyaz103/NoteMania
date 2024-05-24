@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NoteMania"
         tools:targetApi="31">
         <activity
+            android:name=".notesActivity"
+            android:exported="false" />
+        <activity
             android:name=".forgotpassword"
             android:exported="false" />
         <activity
