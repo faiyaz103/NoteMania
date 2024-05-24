@@ -112,6 +112,7 @@
         android:text="Forgot Password"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:id="@+id/gotoforgotpassword"
         android:textColor="@color/black"
         android:layout_below="@id/login"
         android:layout_marginTop="10dp"
