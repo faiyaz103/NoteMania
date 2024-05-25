@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notedetails">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbarfornotedetail"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="Title Displayed Here"
+                android:textColor="@color/black"
+                android:id="@+id/titleofnotedetail" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="17sp"
+        android:background="#faf7f7"
+        android:gravity="top|left"
+        android:textColor="@color/black"
+        android:hint="Enter your note content here"
+        android:layout_below="@id/toolbarfornotedetail"
+        android:padding="15dp"
+        android:id="@+id/contentofnotedetail" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:id="@+id/gotoeditnote"
+        android:src="@drawable/edit"
+        app:backgroundTint="#A1F4FB"
+        app:maxImageSize="56dp" />
+
+</RelativeLayout>

@@ -2,13 +2,17 @@ package com.example.notemania;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +27,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 
 public class notesActivity extends AppCompatActivity {
 
@@ -64,8 +71,50 @@ public class notesActivity extends AppCompatActivity {
         noteAdapter=new FirestoreRecyclerAdapter<firebasemodel,NoteViewHolder>(allusernotes){
             @Override
             protected void onBindViewHolder(@NonNull NoteViewHolder noteViewHolder,int i,@NonNull firebasemodel firebasemodel){
+
+                ImageView popupbutton=noteViewHolder.itemView.findViewById(R.id.menupopbutton);
+
+                int colourcode=getRandomcolor();
+                noteViewHolder.mnote.setBackgroundColor(noteViewHolder.itemView.getResources().getColor(colourcode,null));
                 noteViewHolder.notetitle.setText(firebasemodel.getTitle());
                 noteViewHolder.notecontent.setText(firebasemodel.getContent());
+
+                noteViewHolder.itemView.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v){
+                   //we have to open note detail activity
+                        Intent intent=new Intent(v.getContext(),notedetails.class);
+                        v.getContext().startActivity(intent);
+                        //Toast.makeText(getApplicationContext(),"This is Clicked",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                popupbutton.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        PopupMenu popupMenu=new PopupMenu(v.getContext(),v);
+                        popupMenu.setGravity(Gravity.END);
+                        popupMenu.getMenu().add("Edit").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(@NonNull MenuItem item) {
+                                Intent intent=new Intent(v.getContext(),editnoteactivity.class);
+                                v.getContext().startActivity(intent);
+                                return false;
+                            }
+                        });
+                        popupMenu.getMenu().add("Delete").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
+                            @Override
+                            public boolean onMenuItemClick(MenuItem item){
+                                Toast.makeText(v.getContext(),"This Note is Deleted",Toast.LENGTH_SHORT).show();
+                                return false;
+                            }
+                        });
+                        popupMenu.show();
+                    }
+                });
+
+
 
 
             }
@@ -129,5 +178,24 @@ public class notesActivity extends AppCompatActivity {
         if(noteAdapter!=null){
             noteAdapter.startListening();
         }
+    }
+    private int getRandomcolor()
+    {
+        List<Integer>colorcode=new ArrayList<>();
+        colorcode.add(R.color.gray);
+        colorcode.add(R.color.green);
+        colorcode.add(R.color.pink);
+        colorcode.add(R.color.lightgreen);
+        colorcode.add(R.color.skyblue);
+        colorcode.add(R.color.color1);
+        colorcode.add(R.color.color2);
+        colorcode.add(R.color.color3);
+        colorcode.add(R.color.color4);
+        colorcode.add(R.color.color5);
+
+        Random random=new Random();
+        int number=random.nextInt(colorcode.size());
+        return colorcode.get(number);
+
     }
 }
