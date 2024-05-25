@@ -49,8 +49,8 @@
         android:layout_marginBottom="30dp"
         android:layout_marginEnd="30dp"
         android:id="@+id/saveeditnote"
-        android:src="@drawable/update"
+        android:src="@drawable/baseline_arrow_circle_up_24"
         app:backgroundTint="#A1F4FB"
-        app:maxImageSize="56dp" />
+        app:maxImageSize="40dp" />
 
 </RelativeLayout>
