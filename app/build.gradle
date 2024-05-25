@@ -41,4 +41,14 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 //    implementation 'com.android.support:design:28.0.0'
+    implementation libs.firebase.ui.firestore
+    implementation libs.firebase.auth.vlatestversion
+    implementation libs.firebase.firestore.vlatestversion
+    implementation libs.firebase.ui.firestore.v802
+    implementation libs.google.firebase.firestore
+    implementation libs.recyclerview
+
+
+
+
 }
