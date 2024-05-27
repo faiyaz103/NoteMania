@@ -48,6 +48,20 @@ dependencies {
     implementation libs.google.firebase.firestore
     implementation libs.recyclerview
 
+//    androidTestImplementation libs.espresso.core.v340
+//    androidTestImplementation libs.espresso.intents
+//    androidTestImplementation libs.runner
+//    androidTestImplementation libs.rules
+//    androidTestImplementation libs.firebase.auth.v2101
+//    testImplementation libs.mockito.core
+//    androidTestImplementation libs.mockito.android
+//    androidTestImplementation libs.byte.buddy.android
+//    androidTestImplementation libs.byte.buddy.agent
+//    androidTestImplementation libs.espresso.idling.resource
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test:rules:1.4.0'
+
 
 
 
