@@ -8,22 +8,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import org.w3c.dom.Text;
-
-import java.util.Objects;
 
 public class signup extends AppCompatActivity {
 
@@ -67,6 +59,7 @@ public class signup extends AppCompatActivity {
                 String password=msignuppassword.getText().toString().trim();
 
                 if(mail.isEmpty() || password.isEmpty()){
+                    //Log.d("signup","Button");
                     Toast.makeText(getApplicationContext(),"All fields are required",Toast.LENGTH_SHORT).show();
                 }
                 else if(password.length()<7){
