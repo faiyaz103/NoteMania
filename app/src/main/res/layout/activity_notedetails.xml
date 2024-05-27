@@ -52,9 +52,10 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="30dp"
         android:layout_marginEnd="30dp"
+        android:layout_gravity="bottom|end"
         android:id="@+id/gotoeditnote"
         android:src="@drawable/baseline_edit_24"
-        app:backgroundTint="#A1F4FB"
+        app:backgroundTint="#A1F4AB"
         app:maxImageSize="40dp" />
 
 </RelativeLayout>
