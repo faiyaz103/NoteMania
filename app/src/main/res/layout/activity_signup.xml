@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="New User"
             android:textSize="32sp"
-            android:textColor="#FFC107"
+            android:textColor="#441461"
             android:textStyle="bold"
             android:gravity="center"/>
 
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="Nice To See You Here"
             android:textSize="18sp"
-            android:textColor="#FF8596"
+            android:textColor="#03A9F4"
             android:gravity="center"
             android:layout_marginTop="5dp"/>
     </LinearLayout>
