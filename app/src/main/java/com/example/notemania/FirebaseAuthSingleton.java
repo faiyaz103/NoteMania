@@ -23,4 +23,26 @@ public class FirebaseAuthSingleton {
     public FirebaseAuth getFirebaseAuth() {
         return firebaseAuth;
     }
+    public void signIn(String email, String password, onSignInListener listener) {
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                listener.onSignInSuccess();
+            } else {
+                // Login failed
+                listener.onSignInFailed(task.getException().getMessage());
+            }
+        });
+    }
+
+    public void signOut() {
+        firebaseAuth.signOut();
+    }
+
+
+
+    public interface onSignInListener {
+        void onSignInSuccess();
+        void onSignInFailed(String errorMessage);
+    }
+
 }
