@@ -2,6 +2,7 @@ package com.example.notemania;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -94,5 +95,14 @@ public class editnoteactivity extends AppCompatActivity {
         String notecontent=data.getStringExtra("content");
         meditcontentofnote.setText(notecontent);
         medittitleofnote.setText(notetitle);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == android.R.id.home){
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

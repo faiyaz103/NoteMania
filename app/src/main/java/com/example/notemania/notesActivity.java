@@ -152,9 +152,10 @@ public class notesActivity extends AppCompatActivity {
 
 
         mrecyleview=findViewById(R.id.recyclerview);
-        mrecyleview.setHasFixedSize(true);
-        staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
-        mrecyleview.setLayoutManager(staggeredGridLayoutManager);
+        //mrecyleview.setHasFixedSize(true);
+        MyLayoutManager layoutManager = new MyLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+//        staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        mrecyleview.setLayoutManager(layoutManager);
         mrecyleview.setAdapter(noteAdapter);
 
 
@@ -192,6 +193,7 @@ public class notesActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
         noteAdapter.startListening();
     }
 
