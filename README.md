@@ -13,7 +13,7 @@ NoteMania is an Android application designed to help users manage their notes ef
 - View Notes
 - Logout
 
-## Screenshots
+## App Preview
 ### Sign Up
 ![Sign Up](assets/signup.jpg)
 
