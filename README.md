@@ -1,5 +1,8 @@
 # NoteMania
 
+## Download Application
+[Click here to download](https://github.com/faiyaz103/NoteMania/tags)
+
 ## Overview
 NoteMania is an Android application designed to help users manage their notes efficiently.
 
