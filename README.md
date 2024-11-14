@@ -18,19 +18,19 @@ NoteMania is an Android application designed to help users manage their notes ef
 
 ## App Preview
 ### Sign Up
-![Sign Up](assets/signup.jpg)
+<img src="assets/signup.jpg" alt="Sign Up" width="250"/>
 
 ### Login with Email Verification
-![Login](assets/login.jpg)
+<img src="assets/login.jpg" alt="Login" width="250"/>
 
 ### Forgot Password
-![Forgot Password](assets/forgotpass.jpg)
+<img src="assets/forgotpass.jpg" alt="Forgot Password" width="250"/>
 
 ### Create, Edit, and Delete Notes
-![Create Note](assets/apphome.jpg)
+<img src="assets/apphome.jpg" alt="Create Note" width="250"/>
 
 ### Logout
-![Logout](assets/logout.jpg)
+<img src="assets/logout.jpg" alt="Logout" width="250"/>
 
 ## Project Details
 This project was developed as part of the course **Software Engineering and Information Systems Laboratory (CSE 3120)** at **Khulna University of Engineering and Technology**.
